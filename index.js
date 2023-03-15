@@ -51,5 +51,6 @@
 
 // console.log(!false && 11 || 18 && !''); // вернет 11
 
-let name = 0;
-console.log(name ?? "без имени")
+// let name = 0;
+// console.log(name ?? "без имени")
+// // вернет 0
