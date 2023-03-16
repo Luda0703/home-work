@@ -156,8 +156,8 @@
 // } // выводит, `Число; 0, 1, 2`
 
 
-for (let num = 0; num < 2; num++) {
-    for(let size = 0; size < 3; size++) {
-        console.log(size);
-    }
-}
+// for (let num = 0; num < 2; num++) {
+//     for(let size = 0; size < 3; size++) {
+//         console.log(size);
+//     }
+// } // выводит с 0 до 2 два раза
