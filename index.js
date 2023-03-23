@@ -161,3 +161,118 @@
 //         console.log(size);
 //     }
 // } // выводит с 0 до 2 два раза
+
+
+/////////// TASK-5 (function) ///////////////
+
+// Задача №1
+// Кто попадает в консоль первым Вася или Коля?
+
+// function showName() {
+//     console.log('Вася!');
+// }
+// setTimeout(showName, 0);
+// console.log('Коля!')
+// // Коля
+
+// Задача №2
+// Верно ли вызвана функция?
+
+// showMassage();
+// function showMassage() {
+//     console.log('Сообщене');
+// } // Да
+
+// Задача №3
+// Верно ли вызвана функция?
+
+// showMassage();
+// let showMassage = function () {
+//     console.log('Сообщене');
+// } // нет, нужно вызывать showMassage() после функции
+
+//Задача №4
+// как разрулить проблему?
+
+// 'use strict'
+
+// let showMassage
+// if (2 > 1) {
+//     showMassage = function () {
+//         console.log('Сообщене');
+//     }
+// }
+// showMassage()
+// //// в таких выражения нужно обьявлять переменную до функции
+
+
+///////////// TASK-6 (обьекты) ////////////////////
+
+// Залача №1 (что будет выведено в консоль?)
+
+// let userInfo = {
+//     name: 'Вася',
+//     age: 30,
+//     "58": 'Значение свойства',
+// }
+// console.log(userInfo[58]);
+// //// 'Значение свойства'
+
+//Задача №2 (что будет выведено в консоль?)
+
+// let userInfo = {
+//     name: 'Вася',
+//     age: 30,
+// }
+// let user = userInfo;
+// user.age = 45;
+// console.log(userInfo.age) //45
+
+// Задача №3 (что будет выведено в консоль?)
+
+// let userInfo = {
+//     name: 'Вася',
+//     age: 30,
+//     showInfo() {
+//         console.log(`${this.name}`);
+//     }
+// }
+// let user = userInfo;
+// userInfo = null;
+// user.showInfo()
+// //// Вася
+
+// Зарача №4  (что будет выведено в консоль?)
+
+// let userInfo = {
+//     name: 'Вася',
+//     age: 30,
+// }
+// for (const key in userInfo) {
+//     const value = userInfo[key];
+//     console.log(value);
+// }
+// //// Вася, 30
+
+// Задача №6  (что будет выведено в консоль?)
+
+// let userInfo = {
+//     name: 'Вася',
+//     age: 30,
+//     address: {
+//         city: "Uzhhorod"
+//     }
+// }
+// for (const key in userInfo.address) {
+//     console.log(userInfo.address[key]);
+// }
+/////  "Uzhhorod"
+
+// Задача №7 (верна ли запись?)
+
+let userInfo = {
+    name: 'Вася',
+    age: 30,
+    "likes js": true
+}
+console.log(userInfo["likes js"])
