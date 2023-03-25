@@ -190,3 +190,182 @@
 //////////////////////////////////////////////////////////
 
 
+// Функція checkPassword(password) отримує пароль користувача в 
+// параметр password, перевіряє його на збіг з паролем 
+// адміністратора у змінній ADMIN_PASSWORD і повертає повідомлення 
+// про результат порівняння, яке зберігається у змінній message.
+
+// Якщо значення параметра password дорівнює null, 
+// значить користувач скасував операцію і в message записується
+//  рядок "Canceled by user!".
+// Якщо значення параметра password збігається зі значенням 
+// ADMIN_PASSWORD, у змінну message присвоюється рядок "Welcome!".
+// Якщо жодна з попередніх умов не виконалася, у змінну message 
+// записується рядок "Access denied, wrong password!".
+
+// function checkPassword(password) {
+//     const ADMIN_PASSWORD = 'jqueryismyjam';
+//     let message
+//     if (password === null) {
+//         message = "Canceled by user!";
+//     } else if (password === ADMIN_PASSWORD) {
+//         message = "Welcome!";
+//     } else {
+//         message = "Access denied, wrong password!"
+//     }
+//     console.log(message)
+//     return message
+// }
+// checkPassword("mangohackzor");
+// checkPassword(null);
+// checkPassword("polyhax");
+// checkPassword("jqueryismyjam");
+
+/////////////////////////////////////////
+
+// Функція isNumberInRange(start, end, number) перевіряє, 
+// чи входить число у проміжок. Вона оголошує три параметри, 
+// значення яких будуть задаватися під час її виклику:
+
+// number - число, входження якого перевіряється
+// start - початок числового проміжку
+// end - кінець числового проміжку
+// Присвой змінній isInRange вираз перевірки входження number у 
+// числовий проміжок від start до end. Тобто число повинно бути
+//  більшим або дорівнювати start, і меншим або дорівнювати end. 
+//  Результатом виразу перевірки буде буль true або false.
+
+// function isNumberInRange(start, end, number) {
+//     let isInRange = number >= start && number <= end;
+//     console.log(isInRange)
+//     return isInRange;
+// }
+// isNumberInRange(10, 30, 17);
+// isNumberInRange(10, 30, 5);
+// isNumberInRange(20, 50, 24);
+// isNumberInRange(20, 50, 76);
+
+//////////////////////////////////////////////
+
+// Функція checkIfCanAccessContent(subType) перевіряє, 
+// чи може користувач отримати доступ до контенту. 
+// Перевірка відбувається за типом передплати. 
+// Отримати доступ можуть тільки користувачі з 
+// передплатою pro або vip.
+
+// Присвой змінній canAccessContent вираз перевірки передплати. 
+// Якщо значення параметра subType дорівнює рядкам "pro" або "vip", 
+// користувач отримає доступ. Результатом виразу перевірки 
+// буде буль true або false.
+
+// function checkIfCanAccessContent(subType) {
+//     let canAccessContent = subType === "pro" || subType === "vip";
+//     console.log(canAccessContent);
+//     return canAccessContent;
+// }
+// checkIfCanAccessContent("pro");
+// checkIfCanAccessContent("starter");
+// checkIfCanAccessContent("vip");
+// checkIfCanAccessContent("free");
+
+//////////////////////////////////////////////
+
+// Функція isNumberNotInRange(start, end, number) перевіряє, 
+// чи не входить число у проміжок. Тобто число повинно бути меншим 
+// або дорівнювати start і більшим або дорівнювати end. 
+// Результатом виразу перевірки буде буль true або false.
+
+// Вона оголошує три параметри, значення яких будуть задаватися 
+// під час її виклику:
+
+// number - число, невходження якого перевіряється
+// start - початок числового проміжку
+// end - кінець числового проміжку
+// Присвой змінній isNotInRange вираз інверсії значення змінної 
+// isInRange, використовуючи оператор !.
+
+// function isNumberNotInRange(start, end, number) {
+//     const isInRange = number >= start && number <= end;
+//     const isNotInRange = !isInRange;
+//     console.log(isNotInRange)
+//     return isNotInRange;
+// }
+// isNumberNotInRange(10, 30, 17);
+// isNumberNotInRange(10, 30, 5);
+// isNumberNotInRange(20, 50, 24);
+// isNumberNotInRange(20, 50, 76);
+
+/////////////////////////////////////////
+
+// Функція getDiscount(totalSpent) визначає значення знижки, 
+// залежно від загальної суми витрачених грошей (параметр totalSpent) 
+// в магазині за весь час (партнерська програма). 
+// Знижка записується у змінну discount і повертається з функції 
+// як результат її роботи.
+
+// Використовуючи розгалуження і логічні оператори, доповни код 
+// функції.
+
+// Якщо витрачено від 50000 (включно) або більше кредитів - 
+// знижка 10% (золотий партнер)
+// Якщо витрачено від 20000 (включно) до 50000 кредитів - 
+// знижка 5% (срібний партнер)
+// Якщо витрачено від 5000 (включно) до 20000 кредитів - 
+// знижка 2% (бронзовий партнер)
+// Якщо витрачено менше 5000 кредитів - знижка 0 (базовий партнер)
+// Значення знижок кожного рівня зберігаються в 
+// однойменних константах BASE_DISCOUNT, BRONZE_DISCOUNT, 
+// SILVER_DISCOUNT і GOLD_DISCOUNT.
+
+// function getDiscount(totalSpent) {
+//     const BASE_DISCOUNT = 0;
+//     const BRONZE_DISCOUNT = 0.02;
+//     const SILVER_DISCOUNT = 0.05;
+//     const GOLD_DISCOUNT = 0.1;
+//     let discount;
+
+//     if (totalSpent >= 50000) {
+//         discount = GOLD_DISCOUNT;
+//     } else if (totalSpent >= 20000 && totalSpent < 50000) {
+//         discount = SILVER_DISCOUNT;
+//     } else if (totalSpent >= 5000 && totalSpent < 20000) {
+//         discount = BRONZE_DISCOUNT;
+//     } else {
+//         discount = BASE_DISCOUNT;
+//     }
+//        console.log(discount)
+//     return discount
+// }
+// getDiscount(137000);
+// getDiscount(46900);
+// getDiscount(8250);
+// getDiscount(1300);
+// getDiscount(5000);
+// getDiscount(20000);
+// getDiscount(50000);
+
+/////////////////////////////////
+
+// Функція checkPassword(password) порівнює переданий їй 
+// пароль (параметр password) зі збереженим паролем адміністратора 
+// (константа ADMIN_PASSWORD) і повертає рядок з повідомленням про 
+// результат.
+
+// Використовуючи тернарний оператор, доповни функцію таким чином, 
+// що:
+// Якщо значення password і ADMIN_PASSWORD збігаються, 
+// присвой змінній message рядок "Access is allowed".
+// В іншому випадку, присвой message рядок 
+// "Access denied, wrong password!".
+
+// function checkPassword(password) {
+//     const ADMIN_PASSWORD = "jqueryismyjam";
+//     let message;
+
+//     message = password === ADMIN_PASSWORD ? "Access is allowed" : "Access denied, wrong password!";
+//     console.log(message);
+//     return message;
+// }
+// checkPassword("jqueryismyjam");
+// checkPassword("angul4r1sl1f3");
+// checkPassword("r3actsux")
