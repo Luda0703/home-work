@@ -270,9 +270,10 @@
 
 // Задача №7 (верна ли запись?)
 
-let userInfo = {
-    name: 'Вася',
-    age: 30,
-    "likes js": true
-}
-console.log(userInfo["likes js"])
+// let userInfo = {
+//     name: 'Вася',
+//     age: 30,
+//     "likes js": true
+// }
+// console.log(userInfo["likes js"])
+//// true
