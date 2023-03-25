@@ -170,20 +170,22 @@
 // в іншому випадку, відніми суму покупки з рахунку клієнта і запиши у змінну
 //  message повідомлення: "You ordered <число> droids, you have <число> credits left".
 
-function makeTransaction(pricePerDroid, orderedQuantity, customerCredits) {
-    const totalPrice = pricePerDroid + orderedQuantity;
-    let message
-    if (totalPrice >= customerCredits) {
-        message = "Insufficient funds!";
-    } else {
-        message = `You ordered ${orderedQuantity} droids, you have ${customerCredits} credits left`
-    }
-    console.log(message)
-   return message
-}
-makeTransaction(3000, 5, 23000);
-makeTransaction(1000, 3, 15000);
-makeTransaction(5000, 10, 8000);
-makeTransaction(2000, 8, 10000);
-makeTransaction(500, 10, 5000);
+// function makeTransaction(pricePerDroid, orderedQuantity, customerCredits) {
+//     const totalPrice = pricePerDroid + orderedQuantity;
+//     let message
+//     if (totalPrice >= customerCredits) {
+//         message = "Insufficient funds!";
+//     } else {
+//         message = `You ordered ${orderedQuantity} droids, you have ${customerCredits} credits left`
+//     }
+//     console.log(message)
+//    return message
+// }
+// makeTransaction(3000, 5, 23000);
+// makeTransaction(1000, 3, 15000);
+// makeTransaction(5000, 10, 8000);
+// makeTransaction(2000, 8, 10000);
+// makeTransaction(500, 10, 5000);
+
+//////////////////////////////////////////////////////////
 
